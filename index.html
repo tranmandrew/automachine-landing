@@ -978,38 +978,6 @@
                 }, 2000);
             });
         });
-
-        // Session timeout management
-        let inactivityTimer;
-        let timeoutWarningTimer;
-        const timeoutDuration = 30 * 60 * 1000; // 30 minutes
-        const warningDuration = 2 * 60 * 1000; // 2 minutes warning
-        
-        function resetInactivityTimer() {
-            clearTimeout(inactivityTimer);
-            clearTimeout(timeoutWarningTimer);
-            
-            inactivityTimer = setTimeout(logout, timeoutDuration);
-            timeoutWarningTimer = setTimeout(showTimeoutWarning, timeoutDuration - warningDuration);
-        }
-        
-        function showTimeoutWarning() {
-            const modal = document.getElementById('sessionTimeoutModal');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            
-            let seconds = 120;
-            const countdown = setInterval(() => {
-                seconds--;
-                document.getElementById('timeoutCountdown').textContent = 
-                    `${Math.floor(seconds / 60)}:${(seconds % 60).toString().padStart(2, '0')}`;
-                
-                if (seconds <= 0) {
-                    clearInterval(countdown);
-                    logout();
-                }
-            }, 1000);
-        }
         
         function extendSession() {
             document.getElementById('sessionTimeoutModal').classList.add('hidden');
