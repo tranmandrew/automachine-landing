@@ -126,7 +126,7 @@
                     </p>
                 </div>
 
-                <form action="https://formspree.io/f/xblkjdzz" method="POST" class="bg-gray-50 rounded-xl p-8">
+                <form action="https://api.web3forms.com/submit" method="POST" class="bg-gray-50 rounded-xl p-8">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
@@ -178,20 +178,10 @@
                         <textarea id="requirements" name="requirements" rows="4" placeholder="Tell us about your specific needs: API integration, white-label solutions, custom features, etc." class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-lake focus:border-emerald-lake transition-all resize-none"></textarea>
                     </div>
 
-                    <div class="mb-6">
-                        <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">Implementation Timeline</label>
-                        <select id="timeline" name="timeline" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-lake focus:border-emerald-lake transition-all">
-                            <option value="">Select timeline</option>
-                            <option value="asap">As soon as possible</option>
-                            <option value="1-month">Within 1 month</option>
-                            <option value="3-months">Within 3 months</option>
-                            <option value="6-months">Within 6 months</option>
-                            <option value="planning">Just planning/researching</option>
-                        </select>
-                    </div>
 
-                    <input type="hidden" name="_subject" value="Enterprise Inquiry - Automachine">
-                    <input type="hidden" name="_next" value="https://automachine.dev/contact-success.html">
+                    <input type="hidden" name="access_key" value="f93c282e-e8b5-4825-b247-fb6c719b199f">
+                    <input type="hidden" name="subject" value="Enterprise Inquiry - Automachine">
+                    <input type="hidden" name="redirect" value="https://automachine.dev/contact-success.html">
 
                     <button type="submit" class="w-full gradient-bg text-white py-4 px-8 rounded-lg font-bold text-lg btn-primary transition-all">
                         Send Enterprise Inquiry
@@ -256,7 +246,9 @@
                     </div>
                     <div class="mt-4">
                         <p class="text-gray-400">Subscribe to our newsletter</p>
-                        <form action="https://formspree.io/f/xblkjdzz" method="POST" class="flex mt-2">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="flex mt-2">
+                            <input type="hidden" name="access_key" value="f93c282e-e8b5-4825-b247-fb6c719b199f">
+                            <input type="hidden" name="subject" value="Newsletter Signup - Automachine">
                             <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full" required>
                             <button type="submit" class="bg-emerald-lake px-4 py-2 rounded-r-md">
                                 <i class="fas fa-paper-plane"></i>
