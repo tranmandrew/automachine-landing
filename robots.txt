@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://automachine.dev/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1
+
+# Block common bot traffic to reduce server load
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

@@ -76,15 +76,15 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="index.html" class="flex items-center">
-                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-16">
+                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-12 w-auto">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="text-gray-600 hover:text-emerald-lake transition-colors font-medium">Home</a>
                 <a href="pricing.html" class="text-gray-600 hover:text-emerald-lake transition-colors font-medium">Pricing</a>
-                <a href="https://app.automachine.dev" class="text-gray-600 hover:text-emerald-lake transition-colors font-medium">Login</a>
-                <a href="https://app.automachine.dev" class="bg-emerald-lake text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-all">
-                    Get Started
+                <a href="https://app.automachine.dev/login" class="text-gray-600 hover:text-emerald-lake transition-colors font-medium">Sign In</a>
+                <a href="https://app.automachine.dev/signup" class="bg-emerald-lake text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-all">
+                    Start Free Analysis
                 </a>
             </nav>
             <button class="md:hidden text-gray-600" id="mobileMenuToggle">
@@ -98,8 +98,8 @@
         <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="index.html" class="nav-link transition-all font-medium py-2 border-b">Home</a>
             <a href="pricing.html" class="nav-link transition-all font-medium py-2 border-b">Pricing</a>
-            <a href="https://app.automachine.dev" class="nav-link transition-all font-medium py-2 border-b">Login</a>
-            <a href="https://app.automachine.dev" class="btn-primary mt-2 px-6 py-3 rounded-md text-white font-medium bg-emerald-lake transition-all text-center">Get Started</a>
+            <a href="https://app.automachine.dev/login" class="nav-link transition-all font-medium py-2 border-b min-h-[44px] flex items-center">Sign In</a>
+            <a href="https://app.automachine.dev/signup" class="btn-primary mt-2 px-6 py-3 rounded-md text-white font-medium bg-emerald-lake transition-all text-center min-h-[48px] flex items-center justify-center">Start Free Analysis</a>
         </div>
     </div>
 
@@ -246,10 +246,9 @@
                     </div>
                     <div class="mt-4">
                         <p class="text-gray-400">Subscribe to our newsletter</p>
-                        <form action="https://api.web3forms.com/submit" method="POST" class="flex mt-2">
-                            <input type="hidden" name="access_key" value="f93c282e-e8b5-4825-b247-fb6c719b199f">
+                        <form action="https://formspree.io/f/xblkjdzz" method="POST" class="flex mt-2">
                             <input type="hidden" name="subject" value="Newsletter Signup - Automachine">
-                            <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full" required>
+                            <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full focus:outline-none focus:ring-2 focus:ring-emerald-lake focus:ring-offset-2" required>
                             <button type="submit" class="bg-emerald-lake px-4 py-2 rounded-r-md">
                                 <i class="fas fa-paper-plane"></i>
                             </button>

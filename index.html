@@ -6,7 +6,7 @@
 
   <title>Automachine – AI Grading & Listing for Watch Resellers</title>
   <meta name="description" content="Automachine helps watch resellers automate grading, specs, and listing exports with AI. Save time, reduce errors, and streamline your workflow.">
-  <meta name="keywords" content="watch reselling, AI watch grading, ecommerce automation, product listing tool, JSON export, Automachine">
+  <meta name="keywords" content="AI watch grading, watch condition assessment, luxury watch authentication, watch reselling automation, professional watch tools, watch inventory management, Automachine">
   <meta name="author" content="Automachine">
   <meta name="theme-color" content="#0d9488">
   
@@ -31,6 +31,45 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Automachine",
+    "description": "AI-powered watch condition grading and listing automation for professionals",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "url": "https://automachine.dev",
+    "creator": {
+      "@type": "Organization",
+      "name": "Automachine",
+      "url": "https://automachine.dev"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "99.00",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "RecurringPaymentFrequency",
+        "frequency": "Monthly"
+      }
+    },
+    "featureList": [
+      "AI watch condition grading",
+      "Automated listing generation",
+      "Multi-format export capabilities",
+      "Professional condition reports",
+      "60-second analysis time"
+    ]
+  }
+  </script>
 
   <!-- Tailwind CSS & Font Awesome -->  
   <script src="https://cdn.tailwindcss.com"></script>
@@ -103,15 +142,15 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="index.html" class="flex items-center">
-                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-16">
+                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine - AI Watch Grading Platform Logo" class="h-12 w-auto">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="pricing.html" class="nav-link transition-all font-medium">Pricing</a>
-                <a href="https://app.automachine.dev" class="nav-link transition-all font-medium">Login</a>
-                <a href="https://app.automachine.dev" class="btn-primary ml-4 px-6 py-2 rounded-md text-white font-medium bg-emerald-lake transition-all">Get Started</a>
+                <a href="https://app.automachine.dev/login" class="nav-link transition-all font-medium">Sign In</a>
+                <a href="https://app.automachine.dev/signup" class="btn-primary ml-4 px-6 py-2 rounded-md text-white font-medium bg-emerald-lake transition-all">Start Free Scan</a>
             </nav>
-            <button class="md:hidden text-gray-600">    
+            <button class="md:hidden text-gray-600" id="mobileMenuToggle">    
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
@@ -120,10 +159,10 @@
     <!-- Mobile Menu -->
     <div class="md:hidden hidden bg-white shadow-lg absolute w-full z-40 transform transition-all duration-300 ease-in-out -translate-y-full" id="mobileMenu">
         <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="index.html" class="nav-link transition-all font-medium py-2 border-b">Home</a>
-            <a href="pricing.html" class="nav-link transition-all font-medium py-2 border-b">Pricing</a>
-            <a href="https://app.automachine.dev" class="nav-link transition-all font-medium py-2 border-b">Login</a>
-            <a href="https://app.automachine.dev" class="btn-primary mt-2 px-6 py-3 rounded-md text-white font-medium bg-emerald-lake transition-all text-center">Get Started</a>
+            <a href="index.html" class="nav-link transition-all font-medium py-3 border-b min-h-[44px] flex items-center">Home</a>
+            <a href="pricing.html" class="nav-link transition-all font-medium py-3 border-b min-h-[44px] flex items-center">Pricing</a>
+            <a href="https://app.automachine.dev/login" class="nav-link transition-all font-medium py-3 border-b min-h-[44px] flex items-center">Sign In</a>
+            <a href="https://app.automachine.dev/signup" class="btn-primary mt-2 px-6 py-4 rounded-md text-white font-medium bg-emerald-lake transition-all text-center min-h-[48px] flex items-center justify-center">Start Free Scan</a>
         </div>
     </div>
 
@@ -141,18 +180,24 @@
                         <p class="text-2xl text-gray-600 mb-10 leading-relaxed">
                             Instantly identify, grade, and describe any watch - just upload a photo. <br><span class="text-emerald-lake font-semibold">Trusted by resellers, repair shops & collectors saving hours per day.</span>
                         </p>
-                        <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
-                            <a href="https://app.automachine.dev" class="btn-primary px-10 py-5 rounded-md text-xl text-white font-medium bg-emerald-lake transition-all text-center">
-                                Start Professional Analysis
-                            </a>
-                            <a href="#how-it-works" class="btn-secondary px-10 py-5 rounded-md text-xl font-medium bg-gray-100 text-gray-700 transition-all text-center">
-                                See How It Works
-                            </a>
+                        <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6 items-start">
+                            <div class="text-center">
+                                <a href="https://app.automachine.dev/signup" class="btn-primary px-10 py-4 rounded-md text-xl text-white font-medium bg-emerald-lake transition-all inline-block">
+                                    Start Free Analysis
+                                </a>
+                                <p class="text-sm text-gray-600 mt-2">No credit card required</p>
+                            </div>
+                            <div class="text-center">
+                                <a href="#how-it-works" class="btn-secondary px-10 py-4 rounded-md text-xl font-medium bg-gray-100 text-gray-700 transition-all inline-block">
+                                    See How It Works
+                                </a>
+                                <p class="text-sm text-transparent mt-2">.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                         <div class="flex items-start space-x-6">
-                            <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/ap15500ro_lvlmrr.png" alt="Audemars Piguet Royal Oak 15500" class="w-64">
+                            <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/ap15500ro_lvlmrr.png" alt="Audemars Piguet Royal Oak 15500 watch being analyzed by Automachine AI grading system" class="w-64" loading="lazy" width="256" height="256">
                             
                             <!-- Always Visible Preview Card -->
                             <div class="bg-white rounded-xl shadow-2xl border border-gray-200 w-80">
@@ -354,8 +399,8 @@
                         <h3 class="text-xl font-medium text-gray-700 mb-6">
                             Built by watch industry professionals, powered by cutting-edge AI
                         </h3>
-                        <a href="https://app.automachine.dev" class="btn-primary inline-block px-8 py-4 rounded-md text-white font-medium bg-emerald-lake transition-all">
-                            Start Professional Analysis
+                        <a href="https://app.automachine.dev/signup" class="btn-primary inline-block px-8 py-4 rounded-md text-white font-medium bg-emerald-lake transition-all">
+                            Start Free Analysis
                         </a>
                     </div>
                 </div>
@@ -489,10 +534,10 @@
                         Join hundreds of watch professionals who trust Automachine.
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="https://app.automachine.dev" class="btn-primary px-8 py-4 rounded-md text-emerald-lake font-medium bg-white transition-all inline-block">
-                            Start Professional Analysis
+                        <a href="https://app.automachine.dev/signup" class="btn-primary px-8 py-4 rounded-md text-emerald-lake font-medium bg-white transition-all inline-block">
+                            Start Free Analysis
                         </a>
-                        <a href="pricing.html" class="px-8 py-4 rounded-md font-medium bg-transparent border-2 border-white text-white transition-all inline-block">
+                        <a href="pricing.html" class="px-8 py-4 rounded-md font-medium bg-transparent border-2 border-white text-white transition-all inline-block hover:bg-white hover:text-emerald-lake transform hover:-translate-y-1">
                             View Pricing
                         </a>
                     </div>
@@ -507,7 +552,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-12">
+                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine - Professional Watch Grading Platform" class="h-12" loading="lazy" width="150" height="48">
                     <p class="text-gray-400">
                         AI-powered watch condition grading for professionals.
                     </p>
@@ -539,7 +584,7 @@
                     <div class="mt-4">
                         <p class="text-gray-400">Subscribe to our newsletter</p>
                         <form action="https://formspree.io/f/xblkjdzz" method="POST" class="flex mt-2">
-                            <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full" required>
+                            <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full focus:outline-none focus:ring-2 focus:ring-emerald-lake focus:ring-offset-2" required>
                             <button type="submit" class="bg-emerald-lake px-4 py-2 rounded-r-md">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
@@ -638,7 +683,7 @@
         });
 
         // Mobile menu toggle with animation
-        document.querySelector('button').addEventListener('click', function() {
+        document.querySelector('#mobileMenuToggle').addEventListener('click', function() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
             if (!menu.classList.contains('hidden')) {
