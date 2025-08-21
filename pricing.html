@@ -105,6 +105,10 @@
             color: #0d9488;
             transform: translateX(2px);
         }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
         .btn-secondary:hover {
             background-color: #f3f4f6;
             transform: translateY(-2px);
@@ -121,7 +125,7 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="index.html" class="flex items-center">
-                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-16">
+                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine Logo" class="h-12 w-auto">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8">
@@ -141,8 +145,8 @@
     <!-- Mobile Menu -->
     <div class="md:hidden hidden bg-white shadow-lg absolute w-full z-40 transform transition-all duration-300 ease-in-out -translate-y-full" id="mobileMenu">
         <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="index.html" class="nav-link transition-all font-medium py-2 border-b">Home</a>
-            <a href="pricing.html" class="nav-link transition-all font-medium py-2 border-b text-emerald-lake">Pricing</a>
+            <a href="index.html" class="nav-link transition-all font-medium py-2 border-b min-h-[44px] flex items-center">Home</a>
+            <a href="pricing.html" class="nav-link transition-all font-medium py-2 border-b text-emerald-lake min-h-[44px] flex items-center">Pricing</a>
             <a href="https://app.automachine.dev/login" class="nav-link transition-all font-medium py-2 border-b min-h-[44px] flex items-center">Sign In</a>
             <a href="https://app.automachine.dev/signup" class="btn-primary mt-2 px-6 py-3 rounded-md text-white font-medium bg-emerald-lake transition-all text-center min-h-[48px] flex items-center justify-center">Start Free Analysis</a>
         </div>
@@ -343,7 +347,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine" class="h-12 mb-4">
+                    <img src="https://res.cloudinary.com/dxnohgxkg/image/upload/v1720890521/automachinefull1_qwgmva.png" alt="Automachine" class="h-12 w-auto mb-4">
                     <p class="text-gray-400">Professional watch condition grading platform.</p>
                 </div>
                 <div>
