@@ -48,7 +48,7 @@ export default function Contact() {
               Ready to automate your workflows?
             </p>
             <p className="text-heading text-gray-800 mb-4 font-medium">
-              Let's discuss your automation goals<br />
+              Let&apos;s discuss your automation goals<br />
               and create a custom solution
             </p>
             <p className="text-lg text-gray-600">
@@ -112,7 +112,7 @@ export default function Contact() {
                       andrew@automachine.dev
                     </p>
                     <p className="text-sm text-gray-600 mt-4">
-                      We'll get back to you within 24 hours.
+                      We&apos;ll get back to you within 24 hours.
                     </p>
                   </div>
               </div>
